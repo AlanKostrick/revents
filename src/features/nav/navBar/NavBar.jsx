@@ -1,10 +1,10 @@
-import React, { Component } from "react";
-import { Menu } from "semantic-ui-react";
-import { Container } from "semantic-ui-react";
-import { Button } from "semantic-ui-react";
-import { NavLink, Link, withRouter } from "react-router-dom";
-import SignedOutMenu from "../menus/SignedOutMenu";
-import SignedInMenu from "../menus/SignedInMenu";
+import React, { Component } from 'react';
+import { Menu } from 'semantic-ui-react';
+import { Container } from 'semantic-ui-react';
+import { Button } from 'semantic-ui-react';
+import { NavLink, Link, withRouter } from 'react-router-dom';
+import SignedOutMenu from '../menus/SignedOutMenu';
+import SignedInMenu from '../menus/SignedInMenu';
 
 class NavBar extends Component {
   state = {
@@ -17,28 +17,29 @@ class NavBar extends Component {
 
   handleSignOut = () => {
     this.setState({ authenticated: false });
-    this.props.history.push("/");
+    this.props.history.push('/');
   };
 
   render() {
     const { authenticated } = this.state;
     return (
-      <Menu inverted fixed="top">
+      <Menu inverted fixed='top'>
         <Container>
-          <Menu.Item as={NavLink} exact to="/" header>
-            <img src="/assets/logo.png" alt="logo" />
+          <Menu.Item as={NavLink} exact to='/' header>
+            <img src='/assets/logo.png' alt='logo' />
             Re-vents
           </Menu.Item>
-          <Menu.Item as={NavLink} to="/events" name="Events" />
-          <Menu.Item as={NavLink} to="/people" name="People" />
+          <Menu.Item as={NavLink} to='/events' name='Events' />
+          <Menu.Item as={NavLink} to='/people' name='People' />
+          <Menu.Item as={NavLink} to='/test' name='Test' />
           <Menu.Item>
             <Button
               as={Link}
-              to="/createEvent"
-              floated="right"
+              to='/createEvent'
+              floated='right'
               positive
               inverted
-              content="Create Event"
+              content='Create Event'
             />
           </Menu.Item>
           {authenticated ? (

@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 
 const PhotosPage = () => {
   return (
     <div>
-      <h1>PhotosPage page</h1>
+      <h1>Photos page</h1>
     </div>
   );
 };
